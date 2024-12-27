@@ -1,7 +1,15 @@
-﻿void WriteTheLyric()
+﻿//1.Geriye Değer Döndürmeyen Bir void metot. Ekrana sevdiğiniz bir şarkı sözünü yazdırsın. 
+
+void WriteTheLyric()
 {
     Console.WriteLine("I'm not living, I'm just killing time");
 }
+
+Console.WriteLine("Sevdiğim bir şarkı sözü.");
+WriteTheLyric();
+
+
+//2.Geriye Tamsayı Döndüren Bir metot. Rastgele bir sayı üretip bu sayının 2'ye bölümünden kalanı geriye döndürsün.
 
 int RandomSayiMod2Kalan()
 {
@@ -10,28 +18,27 @@ int RandomSayiMod2Kalan()
     Console.WriteLine($"random sayı: {randomNum} ");
     return randomNum % 2;
 }
+int kalan = RandomSayiMod2Kalan();
+Console.WriteLine($"Rastgele bir sayı üretip bu sayının 2'ye bölümünden kalan {kalan}.");
+
+//3.Parametre Alan ve Geriye Değer Döndüren Bir Metot.Parametre olarak aldığı iki sayının çarpımını geriye dönsün.
 
 int Carpim(int a, int b)
 {
     return a * b;
 }
+int a = 4;
+int b = 7;
+int sonuc = Carpim(a, b);
+Console.WriteLine($"Parametre olarak alınan {a} sayısı ile {b} sayısının çarpımı: {sonuc}");
+
+//4.Parametre Alan ve Geriye Değer Döndürmeyen bir Metot
+//Parametre olarak isim ve soyisim bilgilerini alıp " Hoş Geldiniz {isim} {soyisim} " şeklinde ekrana bassın.
 
 void Greetings(string name, string surName)
 {
     Console.WriteLine($"Hoşgeldiniz, {name} {surName}!");
 }
-
-Console.WriteLine("Sevdiğim bir şarkı sözü.");
-WriteTheLyric();
-
-int kalan = RandomSayiMod2Kalan();
-Console.WriteLine($"Rastgele bir sayı üretip bu sayının 2'ye bölümünden kalan {kalan}.");
-
-Console.WriteLine("Parametre olarak alınan iki sayının çarpımı");
-int a = 4;
-int b = 7;
-int sonuc = Carpim(a, b);
-Console.WriteLine($"Parametre olarak alınan {a} sayısı ile {b} sayısının çarpımı: {sonuc}");
 
 Greetings("Pelin", "Başaslan");
 
